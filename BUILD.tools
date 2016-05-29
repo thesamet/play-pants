@@ -1,0 +1,5 @@
+jar_library(name = 'play-pants-tool',
+            jars = [
+              jar('com.thesamet', 'play-pants-tool', '0.1'),
+            ])
+

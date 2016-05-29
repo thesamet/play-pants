@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<ivysettings>
+  <!-- The ${login} and ${password} values come from a netrc_credentials() object in a BUILD
+       file, which is fed by '~/.netrc'.  There must be a '~/.netrc' machine entry which
+       matches a resolver in the "repos" object in 'pants.ini', which also matches the 'host' in
+       this XML block.
+
+       machine <hostname>
+         login <login>
+         password <password>
+
+       The realm must match the kind of repository you are publishing to. For Sonotype Nexus, use:
+
+       realm="Sonatype Nexus Repository Manager"
+
+    -->
+
+  <properties file="${user.home}/.config/pants/release/jvm/pgp.properties"/>
+  <property name="pgp.secring" value="${user.home}/.gnupg/secring.gpg" override="false"/>
+  <property name="pgp.keyid" value="auto" override="false"/>
+    
+  <credentials host="oss.sonatype.org"
+               realm="Sonatype Nexus Repository Manager"
+               username="${login}"
+               passwd="${password}"/>
+
+  <settings defaultResolver="maven2"/>
+
+  <resolvers>
+    <!-- For resolving foreign deps only (to create a poms for publishing). -->
+    <ibiblio name="maven2" m2compatible="true"/>
+
+    <!-- For publishing to maven central only. -->
+    <ibiblio name="oss.sonatype.org"
+             m2compatible="true"
+             root="https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+             signer="pgp"/>
+  </resolvers>
+
+  <signers>
+    <pgp name="pgp"
+         secring="${pgp.secring}"
+         keyId="${pgp.keyid}"
+         password="${pgp.password}"/>
+  </signers>
+</ivysettings>
+

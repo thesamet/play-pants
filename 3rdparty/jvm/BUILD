@@ -5,7 +5,7 @@ jar_library(name = 'twirl-compiler',
 
 jar_library(name = 'routes-compiler',
             jars = [
-              scala_jar('com.typesafe.play', 'routes-compiler', '2.5.3')
+              scala_jar('com.typesafe.play', 'routes-compiler', '2.5.4')
             ])
 
 jar_library(name = 'scopt',

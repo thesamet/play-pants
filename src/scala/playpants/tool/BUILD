@@ -3,7 +3,8 @@ java_library(
     sources = rglobs('*.scala'),
     dependencies = [
         '3rdparty/jvm:twirl-compiler', 
-        '3rdparty/jvm:routes-compiler', 
+        '3rdparty/jvm:routes-compiler',
+        '3rdparty/jvm:play',
         '3rdparty/jvm:scopt'],
     provides = artifact(org='com.thesamet', name='play-pants-tool', repo=public,
                         publication_metadata=publication_metadata('Runtime tool for play-pants.'))

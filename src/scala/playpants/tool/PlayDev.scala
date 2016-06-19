@@ -39,13 +39,18 @@ object PantsDocHandler extends BuildDocHandler {
 
 object PlayDev {
   case class Params(
+    mainClass: String = "play.core.server.DevServerStart",
     projectPath: File = new File("."),
     port: Int = 9000,
     address: String = "127.0.0.1",
     settings: Map[String, String] = Map.empty)
 
-  val parser = new scopt.OptionParser[Params]("routes-gen") {
-    head("routes-gen", "1.0")
+  val parser = new scopt.OptionParser[Params]("play-dev") {
+    head("play-dev", "1.0")
+    opt[String]("mainClass") valueName("<mainClass>") action {
+      (x, c) => c.copy(mainClass = x)
+    } text("Main class")
+
     opt[File]("projectPath") required() valueName("<path>") action {
       (x, c) => c.copy(projectPath = x)
     } text("Path for root of project")
@@ -67,7 +72,7 @@ object PlayDev {
     parser.parse(args, Params()) match {
       case None => System.exit(1)
       case Some(params) =>
-        val mainClass = Class.forName("play.core.server.DevServerStart")
+        val mainClass = Class.forName(params.mainClass)
         val mainDev: Method = mainClass.getMethod("mainDevHttpMode", classOf[BuildLink], classOf[BuildDocHandler], classOf[Int], classOf[String])
         mainDev.invoke(null, new PantsBuildLink(params), PantsDocHandler, params.port: java.lang.Integer, params.address)
     }

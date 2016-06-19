@@ -5,7 +5,7 @@ import java.lang.reflect.Method
 import java.{util => ju}
 
 import play.core.{BuildDocHandler, BuildLink}
-import playpants.tool.PlayDev.Params
+import playpants.tool.RunDev.Params
 
 import scala.collection.JavaConverters._
 
@@ -37,7 +37,7 @@ object PantsDocHandler extends BuildDocHandler {
   override def maybeHandleDocRequest(request: scala.Any): AnyRef = None
 }
 
-object PlayDev {
+object RunDev {
   case class Params(
     mainClass: String = "play.core.server.DevServerStart",
     projectPath: File = new File("."),
@@ -57,7 +57,7 @@ object PlayDev {
 
     opt[Map[String, String]]("settings") valueName("<key1=value1,key2=value2>") action {
       (x, c) => c.copy(settings = x)
-    } text("Settings, comma seperate key=value pairs")
+    } text("Settings, comma separated key=value pairs")
 
     opt[String]("address") valueName("<address>") action {
       (x, c) => c.copy(address = x)

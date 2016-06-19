@@ -5,6 +5,7 @@ import os
 import re
 
 from pants.backend.codegen.tasks.simple_codegen_task import SimpleCodegenTask
+from pants.backend.jvm.targets.jar_dependency import JarDependency
 from pants.backend.jvm.targets.java_library import JavaLibrary
 from pants.backend.jvm.tasks.nailgun_task import NailgunTask
 from pants.base.build_environment import get_buildroot
@@ -21,7 +22,10 @@ class TwirlGen(SimpleCodegenTask, NailgunTask):
   @classmethod
   def register_options(cls, register):
     super(TwirlGen, cls).register_options(register)
-    cls.register_jvm_tool(register, 'play-pants-tool')
+    cls.register_jvm_tool(register, 'play-pants-tool',
+        classpath=[
+          JarDependency(org='com.thesamet', name='play-pants-tool', rev='0.0.6'),
+        ])
 
   def synthetic_target_type(self, target):
     return JavaLibrary

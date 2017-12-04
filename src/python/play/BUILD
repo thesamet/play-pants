@@ -5,7 +5,7 @@ python_library(
   ],
   provides = setup_py(
     name = 'thesamet.playpants',
-    version = '0.1.2',
+    version = '0.2.0',
     description = 'Play plugin for Pants',
     url = 'https://github.com/thesamet/playpants',
     author = 'Nadav Sr. Samet',

@@ -5,7 +5,7 @@ python_library(
   ],
   provides = setup_py(
     name = 'com.actioniq.playpants',
-    version = '0.2.0',
+    version = '0.2.1',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ/play-pants',
     author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',

@@ -4,12 +4,12 @@ python_library(
   dependencies = [
   ],
   provides = setup_py(
-    name = 'thesamet.playpants',
+    name = 'com.actioniq.playpants',
     version = '0.2.0',
     description = 'Play plugin for Pants',
-    url = 'https://github.com/thesamet/playpants',
-    author = 'Nadav Sr. Samet',
-    author_email = 'nadav@thesamet.com',
+    url = 'https://github.com/ActionIQ/play-pants',
+    author = 'Alex Moore',
+    author_email = 'alex@actioniq.com',
     license = 'Apache License, Version 2.0',
     zip_safe = True,
     classifiers = [

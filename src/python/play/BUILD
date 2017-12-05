@@ -8,7 +8,7 @@ python_library(
     version = '0.2.0',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ/play-pants',
-    author = 'Alex Moore',
+    author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
     author_email = 'alex@actioniq.com',
     license = 'Apache License, Version 2.0',
     zip_safe = True,

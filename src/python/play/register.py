@@ -22,3 +22,5 @@ def register_goals():
     task(name='twirl', action=TwirlGen).install('gen')
     task(name='routes', action=RoutesGen).install('gen')
 
+def global_subsystems():
+    return set()

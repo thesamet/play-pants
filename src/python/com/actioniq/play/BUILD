@@ -8,7 +8,7 @@ python_library(
     '3rdparty/python:six',
   ],
   provides = setup_py(
-    name = 'play',
+    name = 'com.actioniq.play',
     version = '0.2.1',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ/play-pants',
@@ -22,7 +22,7 @@ python_library(
       'Operating System :: OS Independent',
       'Programming Language :: Python',
     ],
-    namespace_packages=['play'],
+    namespace_packages=['com.actioniq'],
     entry_points={
       'pantsbuild.plugin': [
         'build_file_aliases = play.register:build_file_aliases',

@@ -18,12 +18,12 @@ setup(**
     'long_description': 'Play plugin for pants',
     'maintainer': 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
     'maintainer_email': 'alex@actioniq.com',
-    'name': 'play',
-    'namespace_packages': ['play'],
+    'name': 'com.actioniq.play',
+    'namespace_packages': ['com.actioniq.play'],
     'package_data': {   },
     'package_dir': {   '': 'src/python'},
-    'packages': ['play'],
-    'url': 'https://github.com/ActionIQ/play-pants',
+    'packages': ['com.actioniq.play'],
+    'url': 'https://github.com/ActionIQ-OSS/play-pants',
     'version': '0.2.1',
     'zip_safe': True}
 )

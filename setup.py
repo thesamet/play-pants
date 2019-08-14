@@ -22,7 +22,7 @@ setup(**
     'maintainer': 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
     'maintainer_email': 'alex@actioniq.com',
     'name': 'com.actioniq.playpants',
-    'namespace_packages': ['com', 'com.actioniq', 'com.actioniq.playpants'],
+    'namespace_packages': ['play', 'play/tasks'],
     'package_data': {   },
     'package_dir': {   '': 'src/python'},
     'packages': ['play', 'play/tasks'],

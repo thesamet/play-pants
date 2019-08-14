@@ -2,6 +2,7 @@ python_library(
   name = 'play',
   sources = rglobs('*.py'),
   dependencies = [
+    # TODO: copy root install-requires here
   ],
   provides = setup_py(
     name = 'play',

@@ -17,6 +17,13 @@ python_library(
       'License :: OSI Approved :: Apache Software License',
       'Operating System :: OS Independent',
       'Programming Language :: Python',
-    ]
+    ],
+    namespace_packages=['play'],
+    entry_points={
+      'pantsbuild.plugin': [
+        'build_file_aliases = play.register:build_file_aliases',
+        'register_goals = play.register:register_goals',
+        'global_subsystems = play.register:global_subsystems']
+    },
   )
 )

@@ -26,8 +26,6 @@ python_library(
       'com',
       'com.actioniq',
       'com.actioniq.play',
-      'com.actioniq.play.targets',
-      'com.actioniq.play.tasks',
     ],
     entry_points={
       'pantsbuild.plugin': [

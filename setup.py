@@ -23,8 +23,6 @@ setup(**
         'com',
         'com.actioniq',
         'com.actioniq.play',
-        'com.actioniq.play.targets',
-        'com.actioniq.play.tasks',
     ],
     'package_data': {   },
     'package_dir': {   '': 'src/python'},

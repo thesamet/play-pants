@@ -26,6 +26,13 @@ python_library(
       'com',
       'com.actioniq',
       'com.actioniq.play',
+      'com.actioniq.play.tasks',
+      'com.actioniq.play.tasks.routes_gen',
+      'com.actioniq.play.tasks.twirl_gen',
+      'com.actioniq.play.targets',
+      'com.actioniq.play.targets.play_project',
+      'com.actioniq.play.targets.routes_library',
+      'com.actioniq.play.targets.twirl_library',
     ],
     entry_points={
       'pantsbuild.plugin': [

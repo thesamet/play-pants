@@ -1,10 +1,10 @@
 python_library(
-  name = 'plugin',
+  name = 'play_packaged',
   sources = rglobs('*.py'),
   dependencies = [
   ],
   provides = setup_py(
-    name = 'com.actioniq.playpants',
+    name = 'play',
     version = '0.2.1',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ/play-pants',

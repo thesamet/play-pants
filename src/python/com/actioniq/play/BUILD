@@ -1,5 +1,5 @@
 python_library(
-  name = 'com.actioniq.play',
+  name = 'play_packaged',
   sources = rglobs('*.py'),
   dependencies = [
     '3rdparty/python:boto3',
@@ -22,12 +22,19 @@ python_library(
       'Operating System :: OS Independent',
       'Programming Language :: Python',
     ],
-    namespace_packages=['com', 'com.actioniq'],
+    namespace_packages=[
+      'com',
+      'com.actioniq',
+      'com.actioniq.play',
+      'com.actioniq.play.targets',
+      'com.actioniq.play.tasks',
+    ],
     entry_points={
       'pantsbuild.plugin': [
         'build_file_aliases = com.actioniq.play.register:build_file_aliases',
         'register_goals = com.actioniq.play.register:register_goals',
-        'global_subsystems = com.actioniq.play.register:global_subsystems']
+        'global_subsystems = com.actioniq.play.register:global_subsystems'
+      ]
     },
   )
 )

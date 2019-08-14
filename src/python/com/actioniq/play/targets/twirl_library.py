@@ -5,7 +5,6 @@ from pants.backend.jvm.targets.jvm_target import JvmTarget
 from pants.base.payload import Payload
 from pants.base.payload_field import PrimitiveField
 
-
 COMMON_TEMPLATE_IMPORTS = [
     "models._",
     "controllers._",

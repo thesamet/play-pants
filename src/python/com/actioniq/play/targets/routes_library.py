@@ -5,7 +5,6 @@ from pants.backend.jvm.targets.jvm_target import JvmTarget
 from pants.base.payload import Payload
 from pants.base.payload_field import PrimitiveField
 
-
 DEFAULT_ROUTES_IMPORTS = [
     'controllers.Assets.Asset',
 ]

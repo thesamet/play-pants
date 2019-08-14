@@ -2,7 +2,10 @@ python_library(
   name = 'play',
   sources = rglobs('*.py'),
   dependencies = [
-    # TODO: copy root install-requires here
+    '3rdparty/python:boto3',
+    '3rdparty/python:pantsbuild.pants',
+    '3rdparty/python:pyjavaproperties',
+    '3rdparty/python:six',
   ],
   provides = setup_py(
     name = 'play',

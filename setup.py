@@ -22,10 +22,10 @@ setup(**
     'maintainer': 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
     'maintainer_email': 'alex@actioniq.com',
     'name': 'play',
-    'namespace_packages': ['play', 'play/targets', 'play/tasks'],
+    'namespace_packages': ['play'],
     'package_data': {   },
     'package_dir': {   '': 'src/python'},
-    'packages': ['play', 'play/targets', 'play/tasks'],
+    'packages': ['play'],
     'url': 'https://github.com/ActionIQ/play-pants',
     'version': '0.2.1',
     'zip_safe': True}

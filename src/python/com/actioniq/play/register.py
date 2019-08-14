@@ -8,12 +8,12 @@ from pants.goal.task_registrar import TaskRegistrar as task
 
 
 def build_file_aliases():
-    return BuildFileAliases(
-        targets={
-            'play_project': PlayProject,
-            'twirl_library': TwirlLibrary,
-            'routes_library': RoutesLibrary
-        })
+    return BuildFileAliases()
+#        targets={
+#            'play_project': PlayProject,
+#            'twirl_library': TwirlLibrary,
+#            'routes_library': RoutesLibrary
+#        })
 
 
 def register_goals():

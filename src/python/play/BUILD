@@ -1,5 +1,5 @@
 python_library(
-  name = 'play_packaged',
+  name = 'play',
   sources = rglobs('*.py'),
   dependencies = [
   ],

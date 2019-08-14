@@ -30,6 +30,7 @@ SCALA_TEMPLATE_IMPORTS = COMMON_TEMPLATE_IMPORTS + [
     "play.api.data._",
 ]
 
+
 class TwirlLibrary(JvmTarget):
   """A Java library generated from JAXB xsd files."""
 

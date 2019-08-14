@@ -1,17 +1,14 @@
+# TODO miteshp: this should match the <root>/setup.py
 python_library(
-  name = 'play_packaged',
+  name = 'plugin',
   sources = rglobs('*.py'),
   dependencies = [
-    '3rdparty/python:boto3',
-    '3rdparty/python:pantsbuild.pants',
-    '3rdparty/python:pyjavaproperties',
-    '3rdparty/python:six',
   ],
   provides = setup_py(
-    name = 'com.actioniq.play',
-    version = '0.2.2',
+    name = 'com.actioniq.playpants',
+    version = '0.2.1',
     description = 'Play plugin for Pants',
-    url = 'https://github.com/ActionIQ-OSS/play-pants',
+    url = 'https://github.com/ActionIQ/play-pants',
     author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
     author_email = 'alex@actioniq.com',
     license = 'Apache License, Version 2.0',
@@ -21,17 +18,6 @@ python_library(
       'License :: OSI Approved :: Apache Software License',
       'Operating System :: OS Independent',
       'Programming Language :: Python',
-    ],
-#    namespace_packages=[
-#      'com',
-#      'com.actioniq',
-#    ],
-    entry_points={
-      'pantsbuild.plugin': [
-        'build_file_aliases = com.actioniq.play.register:build_file_aliases',
-        'register_goals = com.actioniq.play.register:register_goals',
-        'global_subsystems = com.actioniq.play.register:global_subsystems'
-      ]
-    },
+    ]
   )
 )

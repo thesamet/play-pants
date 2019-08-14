@@ -1,8 +1,8 @@
-from setuptools import setup, find_namespace_packages
+from setuptools import setup, find_packages
 
 setup(
     name = 'com.actioniq.play',
-    version = '0.2.2',
+    version = '0.2.6',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ-OSS/play-pants',
     author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
@@ -22,12 +22,12 @@ setup(
             'global_subsystems = com.actioniq.play.register:global_subsystems'
         ]
     },
-#    namespace_packages=[
-#        'com',
-#        'com.actioniq',
-#        'com.actioniq.play',
-#    ],
-    packages = find_namespace_packages(),
+    namespace_packages = [
+        'com',
+        'com.actioniq',
+        'com.actioniq.play',
+    ],
+    packages = find_packages(),
     install_requires = [
         'boto3==1.4.4',
         'pantsbuild.pants>=1.1.0',

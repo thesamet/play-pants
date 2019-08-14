@@ -27,7 +27,11 @@ setup(
         'com.actioniq',
         'com.actioniq.play',
     ],
-    packages = find_packages(),
+    packages = [
+        'com',
+        'com.actioniq',
+        'com.actioniq.play',
+    ],
     install_requires = [
         'boto3==1.4.4',
         'pantsbuild.pants>=1.1.0',

@@ -16,6 +16,9 @@ from play.targets.twirl_library import TwirlLibrary
 
 
 class TwirlGen(SimpleCodegenTask, NailgunTask):
+
+  sources_globs = ('**/*',)
+
   def __init__(self, *args, **kwargs):
     super(TwirlGen, self).__init__(*args, **kwargs)
 
@@ -42,13 +45,13 @@ class TwirlGen(SimpleCodegenTask, NailgunTask):
     main = 'playpants.TwirlGen'
     build_root = get_buildroot()
 
-    sources = [os.path.join(build_root, s) for s in target.sources_relative_to_buildroot()]
+    sources_globs = [os.path.join(build_root, s) for s in target.sources_relative_to_buildroot()]
     source_dir = os.path.join(build_root, target.payload.source_dir)
     template_imports = target.payload.default_template_imports + target.payload.template_imports
     template_imports_mod = [f.replace('%format%', 'html') for f in template_imports]
 
     args = [
-      '--sources', ','.join(sources),
+      '--sources_globs', ','.join(sources_globs),
       '--source_dir', source_dir,
       '--template_imports', ','.join(template_imports_mod),
       '--target', target_workdir

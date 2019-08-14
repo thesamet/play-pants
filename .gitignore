@@ -4,3 +4,4 @@ dist
 .pants.workdir.file_lock
 .cache
 *.pyc
+.idea

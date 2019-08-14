@@ -1,5 +1,5 @@
 python_library(
-  name = 'play',
+  name = 'com.actioniq.play',
   sources = rglobs('*.py'),
   dependencies = [
     '3rdparty/python:boto3',

@@ -25,7 +25,7 @@ setup(**
     'namespace_packages': ['com', 'com.actioniq', 'com.actioniq.playpants'],
     'package_data': {   },
     'package_dir': {   '': 'src/python'},
-    'packages': ['com', 'com.actioniq', 'com.actioniq.playpants'],
+    'packages': ['play', 'play/tasks'],
     'url': 'https://github.com/ActionIQ/play-pants',
     'version': '0.2.1',
     'zip_safe': True}

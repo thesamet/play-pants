@@ -9,7 +9,7 @@ python_library(
   ],
   provides = setup_py(
     name = 'com.actioniq.play',
-    version = '0.2.1',
+    version = '0.2.2',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ-OSS/play-pants',
     author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
@@ -22,18 +22,10 @@ python_library(
       'Operating System :: OS Independent',
       'Programming Language :: Python',
     ],
-    # namespace_packages=[
-    #   'com',
-    #   'com.actioniq',
-    #   'com.actioniq.play',
-    #   'com.actioniq.play.tasks',
-    #   'com.actioniq.play.tasks.routes_gen',
-    #   'com.actioniq.play.tasks.twirl_gen',
-    #   'com.actioniq.play.targets',
-    #   'com.actioniq.play.targets.play_project',
-    #   'com.actioniq.play.targets.routes_library',
-    #   'com.actioniq.play.targets.twirl_library',
-    # ],
+#    namespace_packages=[
+#      'com',
+#      'com.actioniq',
+#    ],
     entry_points={
       'pantsbuild.plugin': [
         'build_file_aliases = com.actioniq.play.register:build_file_aliases',

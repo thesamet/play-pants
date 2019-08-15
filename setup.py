@@ -38,7 +38,7 @@ setup(
     ],
     install_requires = [
         'boto3==1.4.4',
-        'pantsbuild.pants>=1.1.0',
+        'pantsbuild.pants>=1.16.0',
         'pyjavaproperties==0.6',
         'six>=1.9.0,<2'
     ],

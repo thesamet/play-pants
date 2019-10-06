@@ -2,21 +2,21 @@ from __future__ import (absolute_import, division, generators, nested_scopes, pr
                         unicode_literals, with_statement)
 
 import os
-import re
-
-from pants.task.simple_codegen_task import SimpleCodegenTask
-from pants.java.jar.jar_dependency import JarDependency
 from pants.backend.jvm.targets.java_library import JavaLibrary
 from pants.backend.jvm.tasks.nailgun_task import NailgunTask
 from pants.base.build_environment import get_buildroot
 from pants.base.exceptions import TaskError
-from pants.java.distribution.distribution import DistributionLocator
+from pants.java.jar.jar_dependency import JarDependency
+from pants.task.simple_codegen_task import SimpleCodegenTask
 
-from play.targets.routes_library import RoutesLibrary
-from play.targets.play_project import PlayProject
+from ..targets.play_project import PlayProject
+from ..targets.routes_library import RoutesLibrary
 
 
 class RoutesGen(SimpleCodegenTask, NailgunTask):
+
+  sources_globs = ('**/*',)
+
   def __init__(self, *args, **kwargs):
     super(RoutesGen, self).__init__(*args, **kwargs)
 

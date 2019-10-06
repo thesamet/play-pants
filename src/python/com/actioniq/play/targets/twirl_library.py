@@ -5,7 +5,6 @@ from pants.backend.jvm.targets.jvm_target import JvmTarget
 from pants.base.payload import Payload
 from pants.base.payload_field import PrimitiveField
 
-
 COMMON_TEMPLATE_IMPORTS = [
     "models._",
     "controllers._",
@@ -30,6 +29,7 @@ SCALA_TEMPLATE_IMPORTS = COMMON_TEMPLATE_IMPORTS + [
     "play.api.mvc._",
     "play.api.data._",
 ]
+
 
 class TwirlLibrary(JvmTarget):
   """A Java library generated from JAXB xsd files."""

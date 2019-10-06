@@ -1,3 +1,4 @@
+# TODO miteshp: this should match the <root>/setup.py
 python_library(
   name = 'plugin',
   sources = rglobs('*.py'),

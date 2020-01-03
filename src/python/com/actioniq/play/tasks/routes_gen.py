@@ -9,8 +9,8 @@ from pants.base.exceptions import TaskError
 from pants.java.jar.jar_dependency import JarDependency
 from pants.task.simple_codegen_task import SimpleCodegenTask
 
-from ..targets.play_project import PlayProject
-from ..targets.routes_library import RoutesLibrary
+from com.actioniq.play.targets.play_project import PlayProject
+from com.actioniq.play.targets.routes_library import RoutesLibrary
 
 
 class RoutesGen(SimpleCodegenTask, NailgunTask):
@@ -65,4 +65,3 @@ class RoutesGen(SimpleCodegenTask, NailgunTask):
 
     if result != 0:
       raise TaskError('routes-gen ... exited non-zero ({code})'.format(code=result))
-

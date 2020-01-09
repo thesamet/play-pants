@@ -9,7 +9,7 @@ from pants.base.exceptions import TaskError
 from pants.java.jar.jar_dependency import JarDependency
 from pants.task.simple_codegen_task import SimpleCodegenTask
 
-from ..targets.twirl_library import TwirlLibrary
+from com.actioniq.play.targets.twirl_library import TwirlLibrary
 
 
 class TwirlGen(SimpleCodegenTask, NailgunTask):
@@ -58,4 +58,3 @@ class TwirlGen(SimpleCodegenTask, NailgunTask):
 
     if result != 0:
       raise TaskError('twirl-gen ... exited non-zero ({code})'.format(code=result))
-

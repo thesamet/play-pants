@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'com.actioniq.play',
-    version = '0.2.8',
+    version = '0.7.0',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ-OSS/play-pants',
     author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',

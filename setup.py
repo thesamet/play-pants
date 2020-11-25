@@ -37,7 +37,7 @@ setup(
         'com.actioniq.play.tasks',
     ],
     install_requires = [
-        'boto3=>1.4.4',
+        'boto3>=1.4.4',
         'pantsbuild.pants>=1.27.0',
         'pyjavaproperties>=0.7',
         'six>=1.9.0,<2'

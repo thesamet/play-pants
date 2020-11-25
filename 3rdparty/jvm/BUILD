@@ -1,7 +1,25 @@
-jar_library(name = 'twirl-compiler',
-            jars = [
-              scala_jar('com.typesafe.play', 'twirl-compiler', '1.1.1')
-            ])
+TWIRL_REV = '1.1.1'
+
+jar_library(
+    name = 'twirl-compiler',
+    jars = [
+      scala_jar('com.typesafe.play', 'twirl-compiler', TWIRL_REV)
+    ]
+)
+
+jar_library(
+    name = 'twirl-api',
+    jars = [
+      scala_jar('com.typesafe.play', 'twirl-api', TWIRL_REV)
+    ]
+)
+
+jar_library(
+    name = 'twirl-parser',
+    jars = [
+      scala_jar('com.typesafe.play', 'twirl-parser', TWIRL_REV)
+    ]
+)
 
 jar_library(name = 'routes-compiler',
             jars = [

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'com.actioniq.play',
-    version = '0.7.0',
+    version = '0.8.0',
     description = 'Play plugin for Pants',
     url = 'https://github.com/ActionIQ-OSS/play-pants',
     author = 'Nadav Sr. Samet, Alex Moore, Nitay Joffe',
@@ -37,9 +37,9 @@ setup(
         'com.actioniq.play.tasks',
     ],
     install_requires = [
-        'boto3==1.4.4',
-        'pantsbuild.pants>=1.16.0',
-        'pyjavaproperties==0.7',
+        'boto3>=1.4.4',
+        'pantsbuild.pants>=1.27.0',
+        'pyjavaproperties>=0.7',
         'six>=1.9.0,<2'
     ],
     package_dir = {

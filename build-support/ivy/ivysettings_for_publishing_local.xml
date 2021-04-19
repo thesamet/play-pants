@@ -5,7 +5,7 @@
   <property name="m2.repo.relpath" value="[organization]/[module]/[revision]"/>
 
   <resolvers>
-    <filesystem name="local.ivy" m2compatible="true" local="true" overwrite="true">
+    <filesystem name="local.ivy" m2compatible="true" local="true">
       <ivy pattern="${m2.repo.dir}/${m2.repo.relpath}/[module]-[revision].pom"/>
       <artifact pattern="${m2.repo.dir}/${m2.repo.relpath}/[artifact]-[revision](-[classifier]).[ext]"/>
     </filesystem>

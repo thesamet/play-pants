@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<ivysettings>
+  <property name="m2.repo.dir" value="${user.home}/.m2/repository" override="false"/>
+
+  <resolvers>
+    <filesystem name="local.ivy" m2compatible="true" local="true">
+      <ivy pattern="${user.home}/.ivy2/pants/[organisation]/[module]/ivy-[revision].[ext]" />
+      <artifact pattern="${user.home}/.ivy2/pants/[organisation]/[module]/jars/[module]-[revision].[ext]" />
+    </filesystem>
+  </resolvers>
+
+</ivysettings>
+

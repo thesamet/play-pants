@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <ivysettings>
-  <property name="m2.repo.dir" value="${user.home}/.m2/repository" override="false"/>
+  <property name="m2.repo.dir" value="${user.home}/.m2/repository" override="true"/>
 
   <resolvers>
     <filesystem name="local.ivy" m2compatible="true" local="true">

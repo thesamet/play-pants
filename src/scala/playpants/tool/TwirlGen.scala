@@ -34,7 +34,7 @@ object TwirlGen {
         params.sources.foreach {
           source =>
             val imports = params.templateImports.map {
-              f => s"import $f\n"
+              f => s"$f\n"
             }.mkString
 
             val r = play.twirl.compiler.TwirlCompiler.compile(

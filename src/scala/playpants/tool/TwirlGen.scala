@@ -35,7 +35,7 @@ object TwirlGen {
           source =>
             val imports = params.templateImports.map {
               f => s"$f\n"
-            }.mkString
+            }.mkString("import ")
 
             val r = play.twirl.compiler.TwirlCompiler.compile(
               source, params.sourceDir, params.target, "play.twirl.api.HtmlFormat",

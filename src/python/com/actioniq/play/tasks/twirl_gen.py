@@ -24,7 +24,7 @@ class TwirlGen(SimpleCodegenTask, NailgunTask):
     super(TwirlGen, cls).register_options(register)
     cls.register_jvm_tool(register, 'play-pants-tool',
         classpath=[
-          JarDependency(org='com.thesamet', name='play-pants-tool', rev='0.0.6'),
+          JarDependency(org='com.thesamet', name='play-pants-tool', rev='0.0.7'),
         ])
 
   def synthetic_target_type(self, target):

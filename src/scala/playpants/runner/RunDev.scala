@@ -12,8 +12,6 @@ import scala.collection.JavaConverters._
 class PantsBuildLink(params: Params) extends BuildLink {
   private var firstTime = true
 
-  override def runTask(s: String): AnyRef = ???
-
   override def reload(): AnyRef = {
     if (firstTime) {
       firstTime = false

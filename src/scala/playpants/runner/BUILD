@@ -1,6 +1,6 @@
 java_library(
     name = 'playpants-runner',
-    sources = rglobs('*.scala'),
+    sources = ['*.scala'],
     dependencies = [
         '3rdparty/jvm:play',
         '3rdparty/jvm:scopt'],

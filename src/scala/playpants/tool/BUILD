@@ -1,6 +1,6 @@
 java_library(
     name = 'play-pants-tool',
-    sources = rglobs('*.scala'),
+    sources = ['*.scala'],
     dependencies = [
         '3rdparty/jvm:twirl-compiler',
         '3rdparty/jvm:twirl-api',

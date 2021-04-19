@@ -39,7 +39,7 @@ object TwirlGen {
 
             val r = play.twirl.compiler.TwirlCompiler.compile(
               source, params.sourceDir, params.target, "play.twirl.api.HtmlFormat",
-              additionalImports=imports)
+              additionalImports=Seq(imports))
             println(s"HELLO: $source $r")
         }
     }

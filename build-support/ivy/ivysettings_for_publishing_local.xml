@@ -2,11 +2,12 @@
 
 <ivysettings>
   <property name="m2.repo.dir" value="${user.home}/.m2/repository" override="true"/>
+  <property name="m2.repo.relpath" value="[organization]/[module]/[revision]"/>
 
   <resolvers>
     <filesystem name="local.ivy" m2compatible="true" local="true">
-      <ivy pattern="${user.home}/.ivy2/pants/[organisation]/[module]/ivy-[revision].[ext]" />
-      <artifact pattern="${user.home}/.ivy2/pants/[organisation]/[module]/jars/[module]-[revision].[ext]" />
+      <ivy pattern="${m2.repo.dir}/${m2.repo.relpath}/[module]-[revision].pom"/>
+      <artifact pattern="${m2.repo.dir}/${m2.repo.relpath}/[artifact]-[revision](-[classifier]).[ext]"/>
     </filesystem>
   </resolvers>
 

@@ -34,12 +34,12 @@ object TwirlGen {
         params.sources.foreach {
           source =>
             val imports = params.templateImports.map {
-              f => s"import $f\n"
-            }.mkString
+              f => s"$f\n"
+            }.mkString("import ")
 
             val r = play.twirl.compiler.TwirlCompiler.compile(
               source, params.sourceDir, params.target, "play.twirl.api.HtmlFormat",
-              additionalImports=imports)
+              additionalImports=Seq(imports))
             println(s"HELLO: $source $r")
         }
     }

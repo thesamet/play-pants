@@ -28,6 +28,7 @@ JAVA_TEMPLATE_IMPORTS = COMMON_TEMPLATE_IMPORTS + [
 SCALA_TEMPLATE_IMPORTS = COMMON_TEMPLATE_IMPORTS + [
     "play.api.mvc._",
     "play.api.data._",
+    "play.twirl.api._",
 ]
 
 

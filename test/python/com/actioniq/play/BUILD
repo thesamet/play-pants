@@ -3,5 +3,5 @@ python_tests(name='test',
     'src/python/com/actioniq/play:plugin',
     '3rdparty/python:pantsbuild.pants'
   ],
-  sources=globs('**/test_*.py')
+  sources=['**/test_*.py']
 )

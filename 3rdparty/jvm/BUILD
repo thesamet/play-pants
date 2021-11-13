@@ -1,5 +1,5 @@
 TWIRL_REV = '1.3.16'
-PLAY_REV = '2.6.25'
+PLAY_REV = '2.7.2'
 
 jar_library(
     name = 'twirl-compiler',

@@ -1,7 +1,7 @@
 # TODO miteshp: this should match the <root>/setup.py
 python_library(
   name = 'plugin',
-  sources = rglobs('*.py'),
+  sources = ['**/*.py'],
   dependencies = [
   ],
   provides = setup_py(

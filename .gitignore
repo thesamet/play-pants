@@ -5,3 +5,4 @@ dist
 .cache
 *.pyc
 .idea
+*.iml
